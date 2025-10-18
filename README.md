@@ -1,44 +1,38 @@
-# 🧠 Research Assistant Chrome Extension
 
-**Research Assistant** is a lightweight **Chrome Extension** that helps you quickly **summarize selected text** from web pages and **save research notes**.  
-Key concepts wrapped in `**` are highlighted in **bold and color** for easy readability.
+# Research Assistant Chrome Extension
 
----
+Research Assistant is a lightweight Chrome Extension that helps you quickly summarize selected text from web pages and save research notes.
 
-## ✨ Features
+##  Features
+Summarize selected text on any webpage.
+Highlight key phrases automatically (e.g., **Method Concepts**).
+Save and manage research notes locally in Chrome storage.
+Clean interface with preserved line breaks.
+## Setup
 
-- Summarize selected text on any webpage.
-- Highlight key phrases automatically (e.g., `**Method Concepts**`).
-- Save and manage research notes locally in Chrome storage.
-- Clean interface with preserved line breaks.
+Clone or download this repository.
 
----
-
-## 🛠 Setup
-
-1. **Clone or download** this repository.
-2. Open **Google Chrome** and go to:  
+Open Google Chrome and go to:
 chrome://extensions/
 
-3. Enable **Developer mode** (toggle in the top-right corner).
-4. Click **Load unpacked**.
-5. Select the folder containing the extension files:
-sidepanel.html
-sidepanel.css
-sidepanel.js
-manifest.json
+Enable Developer mode (toggle in the top-right corner).
 
-6. Ensure your backend API is running at:  
+Click Load unpacked.
+
+Select the folder containing the extension files: sidepanel.html sidepanel.css sidepanel.js manifest.json
+
+Ensure your backend API is running at:
 http://localhost:8080/api/research/process
+## API Format
 
 The API should accept JSON:
-json
-{
-  "content": "text to summarize",
-  "operation": "summarize"
-}
 
-Usage
+{
+    
+     "content": "text to summarize",
+     "operation": "summarize"
+}
+## Usage
 Click the Research Assistant icon in Chrome.
 
 Select text on any webpage.
@@ -46,22 +40,27 @@ Select text on any webpage.
 Click Summarize — the summarized content will appear below.
 
 Save research notes by typing in the text area and clicking Save Notes.
+##  File Structure
 
-📂 File Structure
+
 /Research-Assistant
-│
+
+
 ├─ sidepanel.html       # Main panel UI
+
 ├─ sidepanel.css        # Styling for panel
+
 ├─ sidepanel.js         # JavaScript logic
+
 ├─ manifest.json        # Chrome Extension manifest
-⚠️ Notes
+##  Notes
 Works only on webpages where scripts can access selected text.
 
 Cannot access text on chrome:// pages or the Chrome Web Store.
 
 Keywords wrapped in ** (e.g., **Method Concepts**) are automatically highlighted.
+## Future Enhancements
 
-🚀 Future Enhancements
 🌙 Dark mode toggle
 
 ⏳ Loading spinner while processing
@@ -69,22 +68,3 @@ Keywords wrapped in ** (e.g., **Method Concepts**) are automatically highlighted
 🔊 Text-to-speech for summaries
 
 🎨 Advanced formatting options for summaries
-
-🧩 Example manifest.json
-{
-  "manifest_version": 3,
-  "name": "Research Assistant",
-  "version": "1.0",
-  "description": "Summarize text and save research notes directly from any webpage.",
-  "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": ["http://localhost:8080/*"],
-  "action": {
-    "default_title": "Research Assistant",
-    "default_popup": "sidepanel.html"
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
-}
