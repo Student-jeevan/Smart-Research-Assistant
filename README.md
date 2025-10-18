@@ -1,6 +1,7 @@
 # 🧠 Research Assistant Chrome Extension
 
-**Research Assistant** is a lightweight **Chrome Extension** that helps you quickly **summarize selected text** from web pages and **save research notes**. Key concepts wrapped in `**` are highlighted in **bold and color** for easy readability.
+**Research Assistant** is a lightweight **Chrome Extension** that helps you quickly **summarize selected text** from web pages and **save research notes**.  
+Key concepts wrapped in `**` are highlighted in **bold and color** for easy readability.
 
 ---
 
@@ -60,10 +61,34 @@ Cannot access text on chrome:// pages or the Chrome Web Store.
 Keywords wrapped in ** (e.g., **Method Concepts**) are automatically highlighted.
 
 🚀 Future Enhancements
-Dark mode toggle
+🌙 Dark mode toggle
 
-Loading spinner while processing
+⏳ Loading spinner while processing
 
-Text-to-speech for summaries
+🔊 Text-to-speech for summaries
 
-Advanced formatting options for summaries
+🎨 Advanced formatting options for summaries
+
+🧩 Example manifest.json
+{
+  "manifest_version": 3,
+  "name": "Research Assistant",
+  "version": "1.0",
+  "description": "Summarize text and save research notes directly from any webpage.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["http://localhost:8080/*"],
+  "action": {
+    "default_title": "Research Assistant",
+    "default_popup": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+❤️ Author
+Developed by Jeevan Thitrya
+📧 Contact: [your-email@example.com]
+📂 GitHub: https://github.com/yourusername
+
