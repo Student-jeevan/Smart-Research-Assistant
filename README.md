@@ -32,12 +32,13 @@ manifest.json
 http://localhost:8080/api/research/process
 
 The API should accept JSON:
-```json
+json
 {
   "content": "text to summarize",
   "operation": "summarize"
 }
-📝 Usage
+
+Usage
 Click the Research Assistant icon in Chrome.
 
 Select text on any webpage.
@@ -87,8 +88,3 @@ Keywords wrapped in ** (e.g., **Method Concepts**) are automatically highlighted
     "128": "icons/icon128.png"
   }
 }
-❤️ Author
-Developed by Jeevan Thitrya
-📧 Contact: [your-email@example.com]
-📂 GitHub: https://github.com/yourusername
-
