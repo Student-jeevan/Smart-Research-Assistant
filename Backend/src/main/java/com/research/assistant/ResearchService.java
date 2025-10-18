@@ -59,7 +59,7 @@ public class ResearchService {
         StringBuilder prompt = new StringBuilder();
         switch(request.getOperation()){
             case "summarize":
-                prompt.append("Provide a clear and concise summary of the following text in few sentences:\n\n");
+                prompt.append("Summarize the following text in three to five clear, concise, and complete bullet points. Ensure each bullet point represents a distinct, high-level idea from the text. Format the output using Markdown, and use bolding for the main topic of each bullet point to enhance readability.\n\n");
                 break;
             case "suggest":
                 prompt.append("Based on the following content : Suggest related topics and further reading. Format the response with clear headings and bullet points : \n\n");
